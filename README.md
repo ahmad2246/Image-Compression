@@ -19,5 +19,5 @@ The JPEG-Compression folder focuses specifically on JPEG compression, which is a
 For more information on using the JPEG-Compression folder, please refer to the README.md file contained within that folder.
 
 
-> Note: Ensure that you read the specific README.md files inside each folder for detailed instructions on using the code and accessing additional resources.
+### Note: Ensure that you read the specific README.md files inside each folder for detailed instructions on using the code and accessing additional resources.
 
