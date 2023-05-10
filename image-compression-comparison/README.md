@@ -42,7 +42,6 @@ pip install numpy Pillow scikit-image opencv-python
 
 ## Usage and Output
 
-[Link to Google Colab Notebook](https://colab.research.google.com/github/ahmad2246/repo/blob/main/reorgnized_code.ipynb)
 
 To utilize the image compression and quality assessment code, follow these steps:
 
