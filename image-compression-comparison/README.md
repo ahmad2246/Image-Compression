@@ -42,6 +42,8 @@ pip install numpy Pillow scikit-image opencv-python
 
 ## Usage and Output
 
+[Link to Google Colab Notebook](https://colab.research.google.com/github/ahmad2246/repo/blob/main/reorgnized_code.ipynb)
+
 To utilize the image compression and quality assessment code, follow these steps:
 
 1. Prepare the Images: Place the images you want to compress in the "images" folder located in the same directory as the Python code. Alternatively, you can specify a different folder path by modifying the "image_folder_path" variable in the code.
@@ -73,7 +75,7 @@ Additionally, each TXT file will provide the average metrics for each compressio
 By following these steps, you can conveniently assess the quality of image compression using various algorithms and evaluate the performance under different types of noise.
 
 
-# The code has been modified as follow:
+# Code Modifications:
 
 The code has been modified to enhance its functionality, readability, and performance. The following improvements have been implemented:
 
