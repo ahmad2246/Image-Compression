@@ -30,53 +30,65 @@ Before running the code, ensure that you have the following packages installed:
 * NumPy
 * Pillow
 * scikit-image
+* OpenCV (cv2)
 
 You can install these packages by running the following command:
 
 ```
-pip install numpy Pillow scikit-image
+pip install numpy Pillow scikit-image opencv-python
+
 ```
 
 
 ## Usage and Output
 
-1. Place the images you want to compress in the "images" folder located in the same path as the Python code. Alternatively, you can specify a different folder path by modifying the "image_folder_path" variable in the code.
-2. Run the code using a Python interpreter.
-3. after excuting the program, 4 new folders will be created (each folder contains noisy images based on the name of the folder)
-4. morover, 5 new folders will be created with "_compressed" at the end of thier names. these folders denote the compressed images
-5. finally, 5 txt files will be created showing the quality metrics for each folder
+To utilize the image compression and quality assessment code, follow these steps:
 
+1. Prepare the Images: Place the images you want to compress in the "images" folder located in the same directory as the Python code. Alternatively, you can specify a different folder path by modifying the "image_folder_path" variable in the code.
 
-each txt file will include
+2. Run the Code: Execute the code using a Python interpreter.
 
+3. Folder Creation: After running the program, the following folders will be created:
 
-* compression ratio for (JPEG, PNG, WEBP) for each image
-* MSE for (JPEG, PNG, WEBP) for each image
-* PSNR for (JPEG, PNG, WEBP) for each image
-* SSIM for (JPEG, PNG, WEBP) for each image
+	* Noisy Image Folders: Four new folders will be created, each containing noisy images based on the specific noise type. The folder names will correspond to the respective noise types.
 
-Additionally, the each txt file will include the average metrics for each compression algorithm:
+	* Compressed Image Folders: Five new folders will be created, with "_compressed" appended to their names. These folders will store the compressed images for the compression that has been on the crossponding folder.
 
-* Average CR for (JPEG, PNG, WEBP)
-* Average MSE for (JPEG, PNG, WEBP)
-* Average PSNR for (JPEG, PNG, WEBP)
-* Average SSIM for (JPEG, PNG, WEBP)
+4. TXT File Generation: Furthermore, five TXT files will be generated, each representing the quality metrics for a specific folder.
+
+Each TXT file will include the following metrics for each image:
+
+* Compression Ratio (JPEG, PNG, WEBP)
+* Mean Squared Error (MSE) (JPEG, PNG, WEBP)
+* Peak Signal-to-Noise Ratio (PSNR) (JPEG, PNG, WEBP)
+* Structural Similarity Index (SSIM) (JPEG, PNG, WEBP)
+
+Additionally, each TXT file will provide the average metrics for each compression algorithm:
+
+* Average Compression Ratio (JPEG, PNG, WEBP)
+* Average MSE (JPEG, PNG, WEBP)
+* Average PSNR (JPEG, PNG, WEBP)
+* Average SSIM (JPEG, PNG, WEBP)
+
+By following these steps, you can conveniently assess the quality of image compression using various algorithms and evaluate the performance under different types of noise.
 
 
 # The code has been modified as follow:
 
+The code has been modified to enhance its functionality, readability, and performance. The following improvements have been implemented:
+
 ## structural similarity index (SSIM)
 
-The code now incorporates the structural similarity index (SSIM) as a quality metric. SSIM provides a more comprehensive assessment of image similarity by considering both pixel-level differences and structural information. It captures perceptual quality by evaluating the similarity of structural patterns and textures between images. SSIM is particularly useful for capturing distortions related to texture, edges, and global structure, providing a more accurate representation of image quality perceived by humans.
+The code now includes the structural similarity index (SSIM) as a quality metric. SSIM offers a more comprehensive evaluation of image similarity by considering both pixel-level differences and structural information. It captures perceptual quality by assessing the similarity of structural patterns and textures between images. SSIM is particularly valuable for detecting distortions related to texture, edges, and global structure, providing a more accurate representation of image quality perceived by humans.
 
 
 ## Noise Addition
 
-The code now introduces four types of noise (Gaussian, Salt and Pepper, Poisson, and Speckle) to the images. Each type of noise is added to all images, and the resulting noisy images are stored in specific folders corresponding to each noise type. This allows for evaluating the performance of each compression algorithm under different types of noise, providing a better overview of their performance.
+To provide a better assessment of each compression algorithm's performance, the code introduces four types of noise: Gaussian, Salt and Pepper, Poisson, and Speckle. These noises are added to all images, resulting in new sets of noisy images. The code organizes the noisy images into specific folders corresponding to each noise type. This enables a comprehensive evaluation of compression algorithms under various noise conditions, allowing for a better understanding of their performance characteristics.
 
-## Showing Output
+## Output Representation
 
-The code store txt files for showing the outputs in more clear and concise way rather than the previous way of showing the output in the console
+The code now generates TXT files to present the output in a more organized and concise manner. Instead of displaying the output solely in the console, the code stores the output information in TXT files. Each TXT file provides clear and structured data, facilitating easier analysis and interpretation of the quality metrics for each image and compression algorithm.
 
 ## Code Refactoring: 
 
@@ -87,8 +99,6 @@ The code has undergone significant refactoring to improve its clarity, maintaina
 * Incorporating proper documentation and comments throughout the code to explain its purpose, inputs, and outputs.
 * Optimizing code logic and reducing redundancy to improve performance.
 
-These code refinements not only make the codebase more maintainable and extensible but also improve its overall performance and reliability.
+These code modifications ensure that the codebase is easier to understand, maintain, and extend. The overall result is a more powerful, user-friendly, and reliable image compression and quality assessment tool.
 
-
-> The modified code now provides a more comprehensive evaluation of image quality by incorporating the SSIM metric and assessing the performance of compression algorithms under different types of noise. Additionally, the code has been refactored to enhance its clarity, organization, and efficiency.
-As a result, the updated code delivers a more powerful and user-friendly image compression and quality assessment tool.
+Please feel free to reach out if you have any further questions or need additional assistance!
